@@ -36,32 +36,21 @@ def find_jolt(num_list):
     return jolt1, jolt3
 
 
-def find_ways(min, num_list, max, check_list):
+def find_ways(min, num_list, max, arrangment_list):
     counter = 0
-
-    for i in range(min, max):
-        print(f'i = {i}, num_list[i] = {num_list[i]}, num_list[max-1] = {num_list[max-1]}, check_list = {check_list}')
-        if num_list[i] == num_list[max - 1]:
-
-            counter += 1
-            break
-        if num_list[i] + 1 in num_list:
-            check_list.append(num_list[i] + 1)
-            print(f'i = {i}, num_list[i] + 1 = {num_list[i] + 1}, check_list = {check_list}')
-            start = num_list.index(num_list[i] + 1)
-            counter += find_ways(start, num_list, max, check_list)
-        elif num_list[i] + 2 in num_list:
-            check_list.append(num_list[i] + 2)
-            print(f'i = {i}, num_list[i] + 2 = {num_list[i] + 2}, check_list = {check_list}')
-            start = num_list.index(num_list[i] + 2)
-            counter += find_ways(start, num_list, max, check_list)
-        elif num_list[i] + 3 in num_list:
-            check_list.append(num_list[i] + 3)
-            print(f'i = {i}, num_list[i] + 3  = {num_list[i] + 3 }, check_list = {check_list}')
-            start = num_list.index(num_list[i] + 3)
-            counter += find_ways(start, num_list, max, check_list)
-        else:
-            break
+    arrangment_list.append(num_list[min])
+    if num_list[min] == num_list[max - 1]:
+        print(f'arrangment_list = {arrangment_list}')
+        counter += 1
+    if num_list[min] + 1 in num_list:
+        start = num_list.index(num_list[min] + 1)
+        counter += find_ways(start, num_list, max, arrangment_list)
+    if num_list[min] + 2 in num_list:
+        start = num_list.index(num_list[min] + 2)
+        counter += find_ways(start, num_list, max, arrangment_list)
+    if num_list[min] + 3 in num_list:
+        start = num_list.index(num_list[min] + 3)
+        counter += find_ways(start, num_list, max, arrangment_list)
     return counter
 
 
@@ -76,6 +65,6 @@ print(num_list)
 jolt1, jolt3 = find_jolt(num_list)
 mult = jolt1 * jolt3
 print(f'mult = {mult}')
-check_list = []
-counter = find_ways(0, num_list, len(num_list), check_list)
+arrangment_list = []
+counter = find_ways(0, num_list, len(num_list), arrangment_list)
 print(f'counter = {counter}')
