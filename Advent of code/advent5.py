@@ -32,8 +32,6 @@ def decode(str):
                 print('Wrong letter in seat code')
             if i == 10:
                 column = column_l
-                # print(f'letter = {letter}, i = {i}, column = {column}')
-        # print(f'"{letter}" {row_f} - {row_b}, {column_l} - {column_r}')
     return row, column
 
 

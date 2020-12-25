@@ -4,7 +4,6 @@ def read_file(file):
         color = ''
         i = 0
         line_list = line.strip('.\n').split(' ')
-        # print(line_list)
         for word in line_list:
             word = word.strip(',').strip(' ')
             if word.isdigit() or word == 'contain':
@@ -18,23 +17,14 @@ def read_file(file):
                 key_color = color.strip(' ')
                 if key_color in rule_dict:
                     value_color_in = value_color + rule_dict[key_color]
-                    # print(f'in dict {key_color}_{value_color_in}')
                     rule_dict[key_color] = value_color_in
                 else:
                     rule_dict[key_color] = value_color
-                    # print(f'not in dict {key_color}_{value_color}')
                 color = ''
                 continue
-            color += word +' '
+            color += word + ' '
     return rule_dict
 
-
-# def shiny_count(bag_color, set_color):
-#     for each_color in rule_dict[bag_color]:
-#         set_color.add(each_color)
-#         if each_color in rule_dict:
-#             shiny_count(each_color, set_color)
-#     return
 
 def shiny_count(bag_color):
     counter = 0
@@ -48,14 +38,10 @@ def shiny_count(bag_color):
     return counter
 
 
-with open('input0.txt', 'r') as file_in:
+with open('input7.txt', 'r') as file_in:
     rule_dict = read_file(file_in)
 
-for key, value in rule_dict.items():
-    print(f'{key}_________{value}')
-
-# set_color = set()
-# shiny_count('shiny gold', set_color)
-# print(len(set_color))
+# for key, value in rule_dict.items():
+#     print(f'{key}_________{value}')
 
 print(shiny_count('shiny gold'))

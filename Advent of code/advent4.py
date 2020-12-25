@@ -38,7 +38,6 @@ def passport_check_valid(passport):
     for field in passport:
         field_name = field.split(':')[0]
         field_value = field.split(':')[1]
-        # print(f'{field_name} - {field_value} _ {type(field_value)}')
         if field_name == 'byr':
             if 1920 <= int(field_value) <= 2002:
                 field_counter += 1
@@ -98,8 +97,6 @@ def field_value_check_hlc(field_value):
 
 with open('input4.txt', 'r') as file_in:
     passports_list = read_file(file_in)
-
-# passports_list = open('input0.txt').read().strip().split('\n\n')
 
 print(passports_list)
 
