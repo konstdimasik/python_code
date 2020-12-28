@@ -1,5 +1,6 @@
 import copy
 
+
 def read_file(file):
     operation_list = []
     for line in file:
@@ -9,11 +10,15 @@ def read_file(file):
 
 
 def find_loop(operation_list):
+    """
+    Идем последовательно по списку операций, запоминаем:
+    последнюю позицию до цикла, сумму к этому моменту и
+    список последовательно выполненыех команд
+    """
     positions_set = set()
     positions_list = []
     sum = 0
     position = 0
-
     while True:
         if position in positions_set:
             break
@@ -38,6 +43,10 @@ def find_loop(operation_list):
 
 
 def find_corrupted(operation_list, positions_list):
+    """
+    Последовательно идем с конца по списку выполненых команд,
+    пробуем подменять команды и проверяем дойдем ли до конца списка операций
+    """
     i = len(positions_list) - 1
     while i >= 0:
         position = positions_list[i]
@@ -54,7 +63,6 @@ def find_corrupted(operation_list, positions_list):
             if position == -1:
                 return accum
         i -= 1
-
 
 
 with open('input8.txt', 'r') as file_in:
