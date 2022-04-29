@@ -18,8 +18,8 @@ def qsort(arr):
         return arr
     else:
         return qsort([x for x in arr[1:] if x < arr[0]]) + \
-               [arr[0]] + \
-               qsort([x for x in arr[1:] if x >= arr[0]])
+            [arr[0]] + \
+            qsort([x for x in arr[1:] if x >= arr[0]])
 
 
 def find_jolt(num_list):
@@ -68,7 +68,7 @@ with open('input10.txt', 'r') as file_in:
 
 num_list.append(0)
 max = max(num_list)
-num_list.append(max+3)
+num_list.append(max + 3)
 print(num_list)
 num_list = qsort(num_list)
 print(num_list)
@@ -77,7 +77,7 @@ jolt1, jolt3 = find_jolt(num_list)
 mult = jolt1 * jolt3
 print(f'mult = {mult}')
 arrangment_list = []
-t0= time.time()
+t0 = time.time()
 counter = find_ways(0, tuple(num_list), len(num_list))
 t1 = time.time()
 print("Time elapsed: ", t1 - t0)

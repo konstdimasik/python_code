@@ -22,7 +22,8 @@ columns = len(m[0])
 
 for i in range(rows):  # вывод новой таблицы
     for j in range(columns):
-        x = int(m[i][j-1]) + int(m[i][j+1-columns]) + int(m[i-1][j]) + int(m[i+1-rows][j])
+        x = int(m[i][j - 1]) + int(m[i][j + 1 - columns]) + \
+            int(m[i - 1][j]) + int(m[i + 1 - rows][j])
         print(x, end=' ')
     print()
 

@@ -29,6 +29,7 @@ class Curator(Human):
         else:
             super().answer_question(question)
 
+
 class Mentor(Human):
     def answer_question(self, question):
         if question == 'мне грустненько, что делать?':
@@ -37,6 +38,7 @@ class Mentor(Human):
             print('Сейчас расскажу.')
         else:
             super().answer_question(question)
+
 
 class CodeReviewer(Human):
     def answer_question(self, question):

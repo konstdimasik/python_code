@@ -18,7 +18,7 @@ for j in range(len(str_in)):
     else:
         tempdigit += str_in[j]
         switcher = 1
-        if j == len(str_in)-1:
+        if j == len(str_in) - 1:
             for i in range(int(tempdigit)):
                 out_str += tempalpha
 

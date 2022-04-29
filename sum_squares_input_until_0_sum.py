@@ -11,7 +11,7 @@ else:
         sum_numbers += numbers[i]
 #        print(f'i={i} number={numbers[i]} sum={sum_numbers}')
     sum_squares = 0
-    for j in range(i+1):
+    for j in range(i + 1):
         sum_squares += numbers[j] * numbers[j]
     print(sum_squares)
 

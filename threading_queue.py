@@ -38,6 +38,7 @@ class Downloader(threading.Thread):
                     break
                 f.write(chunk)
 
+
 def main(urls):
     """
     Запускаем программу
@@ -56,6 +57,7 @@ def main(urls):
 
     # Ждем завершения работы очереди
     queue.join()
+
 
 if __name__ == "__main__":
     urls = ["http://www.irs.gov/pub/irs-pdf/f1040.pdf",

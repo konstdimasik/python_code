@@ -28,7 +28,10 @@ with open('football_input.txt', 'r') as file:
             dict[team2]['score'] += 1
 
 for team in dict:
-    print(f"{team}: {dict[team]['plays']} {dict[team]['wins']} {dict[team]['draws']} {dict[team]['loses']} {dict[team]['score']}")
+    print(
+        f"{team}: {dict[team]['plays']} {dict[team]['wins']}"
+        f"{dict[team]['draws']} {dict[team]['loses']} {dict[team]['score']}"
+    )
 
 # dict = {}
 # # n_games = int(input())

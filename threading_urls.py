@@ -38,9 +38,10 @@ def main(urls):
     Запускаем программу
     """
     for item, url in enumerate(urls):
-        name = "Поток %s" % (item+1)
+        name = "Поток %s" % (item + 1)
         thread = DownloadThread(url, name)
         thread.start()
+
 
 if __name__ == "__main__":
     urls = ["http://www.irs.gov/pub/irs-pdf/f1040.pdf",

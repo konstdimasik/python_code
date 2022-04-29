@@ -1,7 +1,7 @@
-place = [0,0]
+place = [0, 0]
 for _ in range(int(input())):
     list_moves = input().split()
- #   print(list_moves)
+#   print(list_moves)
     if list_moves[0] == 'север':
         place[1] += int(list_moves[1])
     elif list_moves[0] == 'восток':

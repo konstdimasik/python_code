@@ -2,7 +2,8 @@ from urllib.request import urlopen
 
 from bs4 import BeautifulSoup
 
-contents = urlopen("https://stepik.org/media/attachments/lesson/209719/2.html").read().decode('utf-8')
+url = "https://stepik.org/media/attachments/lesson/209719/2.html"
+contents = urlopen(url).read().decode('utf-8')
 
 soup = BeautifulSoup(contents, 'lxml')
 tags = soup.find_all(['code', 'p'])

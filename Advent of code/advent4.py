@@ -19,8 +19,8 @@ def read_file(file):
 def passports_check(list):
     counter = 0
     for passport in list:
-        if (passport_check_present(passport) == 7 and
-                passport_check_valid(passport) == 7):
+        if (passport_check_present(passport) == 7
+                and passport_check_valid(passport) == 7):
             counter += 1
     return counter
 

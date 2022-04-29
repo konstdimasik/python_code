@@ -11,7 +11,7 @@ def find_weakness(num_list):
     set_preamble = set()
     while i < len(num_list):
         counter = 0
-        preamble = num_list[i-25:i]
+        preamble = num_list[i - 25:i]
         for each_num in preamble:
             set_preamble = set(preamble)
             set_preamble.discard(each_num)

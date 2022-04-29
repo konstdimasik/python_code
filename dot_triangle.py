@@ -5,8 +5,8 @@ import math
 def main():
     logging.basicConfig(
         level=logging.DEBUG,
-        filename = "dot_log.log",
-        format = "%(asctime)s - %(module)s - %(levelname)s - %(funcName)s: %(lineno)d - %(message)s",
+        filename="dot_log.log",
+        format="%(asctime)s - %(module)s - %(levelname)s - %(funcName)s: %(lineno)d - %(message)s",
         datefmt='%H:%M:%S',
     )
 

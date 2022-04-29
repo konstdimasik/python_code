@@ -20,6 +20,7 @@ def print_matrix(matrix):
         print()
     print()
 
+
 def seating(seat_matrix):
     height = len(seat_matrix)
     weight = len(seat_matrix[0])
@@ -46,7 +47,7 @@ def near(seat_matrix, y_p, x_p):
     weight = len(seat_matrix[0])
     counter = 0
     for y in (y_p - 1, y_p, y_p + 1):
-        for x in (x_p - 1, x_p,  x_p +1):
+        for x in (x_p - 1, x_p, x_p + 1):
             if y < 0 or x < 0 or x >= weight or y >= height or (x == x_p and y == y_p):
                 continue
             if seat_matrix[y][x] == '#':
@@ -58,8 +59,10 @@ def direction(seat_matrix, y_p, x_p):
     height = len(seat_matrix)
     weight = len(seat_matrix[0])
     counter = 0
-    directions = [[-1, -1], [-1, 0], [-1, 1], [0, 1],
-             [1, 1], [1, 0], [1, -1], [0, -1]]
+    directions = [
+        [-1, -1], [-1, 0], [-1, 1], [0, 1],
+        [1, 1], [1, 0], [1, -1], [0, -1]
+    ]
     for dx, dy in directions:
         x = x_p + dx
         y = y_p + dy
@@ -73,7 +76,7 @@ def direction(seat_matrix, y_p, x_p):
                 y -= dy
                 break
         if seat_matrix[y][x] == '#':
-                    counter += 1
+            counter += 1
     return counter
 
 
@@ -99,7 +102,7 @@ def seating2(seat_matrix):
 
 
 with open('input11.txt', 'r') as file_in:
-        seat_matrix = read_file(file_in)
+    seat_matrix = read_file(file_in)
 
 print_matrix(seat_matrix)
 # print(len(seat_matrix))

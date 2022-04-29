@@ -59,8 +59,8 @@ def qsort(arr):
         return arr
     else:
         return qsort([x for x in arr[1:] if x < arr[0]]) + \
-               [arr[0]] + \
-               qsort([x for x in arr[1:] if x >= arr[0]])
+            [arr[0]] + \
+            qsort([x for x in arr[1:] if x >= arr[0]])
 
 
 with open('input5.txt', 'r') as file_in:
@@ -73,7 +73,7 @@ seat_id_list_sorted = qsort(seat_id_list)
 print(seat_id_list_sorted)
 
 for x in range(seat_id_list_sorted[-1]):
-    if ((x not in seat_id_list_sorted) and
-       ((x-1) in seat_id_list_sorted) and
-       ((x+1) in seat_id_list_sorted)):
+    if ((x not in seat_id_list_sorted)
+            and ((x - 1) in seat_id_list_sorted)
+            and ((x + 1) in seat_id_list_sorted)):
         print(x)

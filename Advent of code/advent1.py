@@ -3,8 +3,8 @@ def qsort(arr):
         return arr
     else:
         return qsort([x for x in arr[1:] if x < arr[0]]) + \
-               [arr[0]] + \
-               qsort([x for x in arr[1:] if x >= arr[0]])
+            [arr[0]] + \
+            qsort([x for x in arr[1:] if x >= arr[0]])
 
 
 list_input = []
