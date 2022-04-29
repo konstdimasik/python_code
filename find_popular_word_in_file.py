@@ -1,4 +1,5 @@
 import timeit
+
 a = timeit.default_timer()
 
 dict_words = {}

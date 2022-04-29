@@ -1,5 +1,6 @@
 import copy
 
+
 def read_file(file):
     seat_matrix = []
     for line in file:

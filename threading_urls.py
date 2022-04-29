@@ -5,6 +5,7 @@ import os
 import urllib.request
 from threading import Thread
 
+
 class DownloadThread(Thread):
     """
     Пример скачивание файла используя многопоточность

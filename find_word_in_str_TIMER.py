@@ -4,6 +4,7 @@
 # Порядок вывода слов может быть произвольным, каждое уникальное
 # слово﻿ должно выводиться только один раз.
 import timeit
+
 a = timeit.default_timer()
 
 str_in = [i for i in input().split()]
